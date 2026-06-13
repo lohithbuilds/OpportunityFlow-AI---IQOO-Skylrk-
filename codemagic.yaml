@@ -10,6 +10,8 @@ workflows:
       - name: Get Flutter packages
         script: |
           cd frontend
+          rm -rf android/app/src/main/java
+          flutter clean
           flutter pub get
 
       - name: Build APK (release)
