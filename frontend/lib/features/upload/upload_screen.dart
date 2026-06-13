@@ -26,7 +26,6 @@ class _UploadScreenState extends State<UploadScreen>
   bool _isUploading = false;
   double _uploadProgress = 0.0;
   String? _selectedFileName;
-  String? _selectedFilePath;
   String _uploadStatusText = '';
 
   late AnimationController _pulseController;
@@ -103,9 +102,6 @@ class _UploadScreenState extends State<UploadScreen>
         final file = result.files.first;
         setState(() {
           _selectedFileName = file.name;
-          if (!kIsWeb) {
-            _selectedFilePath = file.path;
-          }
         });
         if (kIsWeb) {
           if (file.bytes != null) {
@@ -135,9 +131,6 @@ class _UploadScreenState extends State<UploadScreen>
       if (image != null) {
         setState(() {
           _selectedFileName = image.name;
-          if (!kIsWeb) {
-            _selectedFilePath = image.path;
-          }
         });
         if (kIsWeb) {
           final bytes = await image.readAsBytes();
@@ -229,7 +222,6 @@ class _UploadScreenState extends State<UploadScreen>
         _uploadProgress = 0.0;
         _uploadStatusText = '';
         _selectedFileName = null;
-        _selectedFilePath = null;
       });
       _showError('Upload failed: $e');
     }
