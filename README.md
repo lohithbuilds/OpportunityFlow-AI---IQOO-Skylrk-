@@ -1,6 +1,6 @@
 # OpportunityFlow AI 🚀
 
-OpportunityFlow AI is an AI-powered student opportunity navigator, parser, and preparation platform. It helps students discover, analyze, and prepare for premium opportunities (like hackathons, scholarships, fellowships, and competitions) using advanced **Retrieval-Augmented Generation (RAG)** and the **Gemini 2.5 Flash** model.
+OpportunityFlow AI is an AI-powered student opportunity navigator, parser, and preparation platform. It helps students discover, analyze, and prepare for premium opportunities (like hackathons, scholarships, fellowships, and competitions) using advanced **Retrieval-Augmented Generation (RAG)** and the **Gemini 2.5 Flash** model
 
 The platform extracts structured metadata from messy PDFs, images (brochures, posters), or web URLs and instantly builds customized day-by-day preparation roadmaps and a source-grounded interactive chat mentor.
 
