@@ -77,6 +77,10 @@ async def extract_from_document(
     Extract structured opportunity data from a parsed document.
     Uses Gemini's structured output with Pydantic schema.
     """
+    settings = get_settings()
+    model_to_try = settings.gemini_model
+    fallback_model = "gemini-2.5-flash"
+
     def get_mock_data():
         # Try to extract event name and organizer using simple heuristics from text
         event_name = "Future Leaders Tech Hackathon 2026"
