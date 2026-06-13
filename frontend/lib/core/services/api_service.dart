@@ -1,23 +1,10 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-import 'package:flutter/foundation.dart';
-
 /// API service for communicating with the FastAPI backend.
 class ApiService {
-  // Change this to your backend URL
-  static String get baseUrl {
-    if (kIsWeb) {
-      // Automatically detect if running in production web vs local development
-      final host = Uri.base.host;
-      if (host != 'localhost' && host != '127.0.0.1') {
-        // Replace with your actual Render API URL after deployment
-        return 'https://opportunityflow-api.onrender.com/api';
-      }
-      return 'http://localhost:8080/api';
-    }
-    return 'http://10.0.2.2:8080/api';
-  }
+  // Production backend URL (Render)
+  static const String baseUrl = 'https://opportunityflow-ai-iqoo-skylrk-fi8o.onrender.com/api';
 
   final http.Client _client = http.Client();
 
