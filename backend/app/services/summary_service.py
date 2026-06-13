@@ -263,12 +263,12 @@ async def generate_roadmap(
             contents=[prompt],
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
+                response_schema=list[RoadmapTask],
                 temperature=0.4,
                 max_output_tokens=2000,
             ),
         )
-        tasks_data = json.loads(response.text)
-        tasks = [RoadmapTask(**task) for task in tasks_data]
+        tasks = response.parsed or []
         return RoadmapResponse(
             opportunity_name=ext.event_name,
             duration_days=duration_days,
@@ -283,12 +283,12 @@ async def generate_roadmap(
                 contents=[prompt],
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
+                    response_schema=list[RoadmapTask],
                     temperature=0.4,
                     max_output_tokens=2000,
                 ),
             )
-            tasks_data = json.loads(response.text)
-            tasks = [RoadmapTask(**task) for task in tasks_data]
+            tasks = response.parsed or []
             return RoadmapResponse(
                 opportunity_name=ext.event_name,
                 duration_days=duration_days,
