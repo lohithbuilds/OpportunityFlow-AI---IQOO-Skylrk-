@@ -91,7 +91,7 @@ class _UploadScreenState extends State<UploadScreen>
 
   Future<void> _pickPDF() async {
     try {
-      final result = await FilePicker.pickFiles(
+      final result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['pdf', 'doc', 'docx'],
         allowMultiple: false,
