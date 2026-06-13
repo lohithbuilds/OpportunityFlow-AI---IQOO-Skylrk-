@@ -20,11 +20,7 @@ firebase-admin==6.8.0
 chromadb
 
 # Utilities
-# Hard-pinned to avoid pydantic-core==2.33.1 (pydantic 2.11.x) which requires
-# Rust/maturin compilation from source — fails on Render's read-only Cargo FS.
-# pydantic-core==2.27.2 ships pre-built wheels for Python 3.12 (no Rust needed).
-pydantic==2.10.6
-pydantic-core==2.27.2
+pydantic==2.11.3
 pydantic-settings==2.9.1
 python-dotenv==1.1.0
 httpx==0.28.1
