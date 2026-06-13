@@ -1,0 +1,7 @@
+Event: Google Hackathon 2026
+Organized by: Google Developer Relations
+Eligibility: Undergrads in Computer Science, 18-24 years old
+Registration Deadline: 2026-09-30
+Skills required: Python, Go, Flutter
+Benefits: $15,000 cash prizes, Google Nest devices, internship referral
+Contact: dev-hackathon-2026@google.com
